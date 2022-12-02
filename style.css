@@ -111,116 +111,118 @@ nav {
     border-radius: 5px;
 }
 
+/**/
+.window {
+    display:grid;
+    grid-template-rows: 5rem 90vh;
+    grid-template-columns: 10vw 80vw 10vw;
+}
 
 .top {
-    background-color: var(--pink-color);
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 1rem;
-    grid-area: 1/1/2/-1;
-    flex-wrap: wrap;
-}
-
-.top > div > img {
-    width: 2rem;
-    border-radius: 10rem;
-}
-
-.image {
+    grid-area: 1/1/2/4;
     display:flex;
+    justify-content: space-around;
     align-items: center;
-    gap:0.5rem;
+    background-color: var(--main-color);
 }
 
-input[type="search"]{
+.search {
+    display: flex;
+    align-items: center;
+}
+
+input[type="search"] {
+    width: 40vw;
     height: 2rem;
     border-radius: 2rem;
-    padding: 1rem;
-    width: 40vw;
+    background-color: rgb(206, 206, 206);
+    padding:1rem;
 }
 
-nav {
-    backdrop-filter: blur(1rem);
-}
-
-.popo {
-    background: url("https://images.unsplash.com/photo-1433259651738-0e74537aa8b5?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1169&q=80");
-    background-size: cover;
-    background-repeat: no-repeat;
-    filter: blur(0.3rem);
-    width: 100vw;
-    height: 100vh;
-    position: fixed;
-    z-index: -1;
-    background-position: center center;
-    top:0;
-
-}
-
-nav {
-    z-index: 12;
-}
-
-main {
-    display:flex;
-    justify-content: center;
-    align-items: center;
-    z-index: 11;
-
-}
-.main {
-    background-color: #7f1d1d98;
-    width: 70vw;
-    height: 80vh;
-    margin-top: 10vh;
-    margin-bottom: 10vh;
-    backdrop-filter: blur(1rem);
-    border-radius: 1rem;
-}
-
-.main {
-    display: grid;
-    grid-template-columns: 2fr 3fr 1fr;
-    grid-template-rows: 1fr 3fr;
-}
-
-.picture {
-    width: 4rem;
+.icon {
+    width: 3rem;
     border-radius: 10rem;
 }
 
-.main > div {
-    display: flex;
-    align-items: center;
+.welcome {
+    display:flex;
     gap: 0.5rem;
-    justify-content: center;
 }
+
 .buttons {
     display: flex;
     flex-direction: column;
+    gap:0.3rem;
 }
 
 .buttons > button {
-    width: 4rem;
-    border-radius: 2rem;
-    border-color: var(--main-color);
     background-color: var(--pink-color);
+    border-radius: 1rem;
+    width: 5rem;
+    border:1px solid var(--white-color)
 }
 
-.articles {
-    grid-area: 2/1/3/3;
+.content {
+    grid-area:2/2/3/3;
+    display:grid;
     grid-template-columns: repeat(auto-fit,minmax(250px,1fr));
-    grid-template-rows: repeat(auto-fit,minmax(250px,1fr));
+    padding: 1rem;
+    gap: 1rem;
+}
+
+.content > div {
+    box-shadow: 3px 3px 10px;
+    padding: 1rem;
+    border-radius: 5px;
+    animation-duration: 1s;
+}
+
+.content>div:hover {
+    box-shadow: 3px 3px 1rem;
+    outline:5px solid var(--main-color);
+
+}
+
+.content > div:nth-child(3n+1){
+    background: linear-gradient( rgba(255, 255, 255, 0.384),rgba(0, 0, 0, 0.455)),url("https://images.contentstack.io/v3/assets/blt370612131b6e0756/blt02dd32b665c25036/5f4defe8b553152466d1b21a/Homepage_World_1.jpg");
+    background-size: cover;
+    background-position: center center;
+}
+
+.content > div:nth-child(5n+2){
+    background: linear-gradient( rgba(255, 255, 255, 0.384),rgba(0, 0, 0, 0.455)),url("https://images.contentstack.io/v3/assets/bltb6530b271fddd0b1/blt1d72b5b9518e767b/6348b9a2b3f39b38fccfbac4/VALORANT_2022_E5-3_PlayVALORANT_ContentStackThumbnail_1200x625_MB01_opt.jpg");
+    background-size: cover;
+    background-position: center center;
+}
+
+
+.content > div:nth-child(6n+3){
+    background: linear-gradient( rgba(255, 255, 255, 0.384),rgba(0, 0, 0, 0.455)),url("https://www.riotgames.com/darkroom/800/87521fcaeca5867538ae7f46ac152740:2f8144e17957078916e41d2410c111c3/002-rg-2021-full-lockup-offwhite.jpg");
+    background-size: cover;
+    background-position: center center;
+}
+
+.content > div:nth-child(6n+5){
+    background: linear-gradient( rgba(255, 255, 255, 0.384),rgba(0, 0, 0, 0.455)),url("https://www.mobafire.com/images/champion/skins/landscape/teemo-firecracker-762x.jpg");
+    background-size: cover;
+    background-position: center center;
+}
+
+.content > div:nth-child(2n+6){
+    background: linear-gradient( rgba(255, 255, 255, 0.384),rgba(0, 0, 0, 0.455)),url("https://i.ytimg.com/vi/0P6jeK9BIDc/maxresdefault.jpg");
+    background-size: cover;
+    background-position: center center;
+}
+
+
+.ann {
+    display: grid;
+    grid-template-rows: repeat(auto-fit,minmax(100px,200px));
     gap: 15px;
-    overflow: overlay;
     padding: 1rem;
 }
 
-.articles > div {
-    background-color: var(--pink2-color);
-    padding: 0.5rem;
-    border-radius: 0.5rem;
-    box-shadow: 3px 3px 5px;
+.ann > div{
+    box-shadow: 3px 3px 10px;
+    padding: 1rem;
 }
-
