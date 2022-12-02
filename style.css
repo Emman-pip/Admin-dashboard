@@ -1,0 +1,226 @@
+* {
+    box-sizing: border-box;
+    margin:0;
+    padding:0;
+    font-family: 'RobotoRegular';
+    font-weight: normal;
+    font-style: normal;
+}
+
+:root {
+    --main-color:#7f1d1d;
+    --white-color:#fee2e2;
+    --pink-color:#f871715f;
+    --pink2-color:#fca5a598;
+    background-color: rgb(219, 219, 219);
+}
+
+nav {
+    grid-area: 1/1/2/2;
+    background-color:var(--main-color);
+    color: var(--white-color);
+    overflow: hidden;
+}
+
+nav {
+    display: flex;
+    flex-direction: column;
+    gap:2rem;
+    padding: 1rem;
+}
+
+nav  > div {
+    display: flex;
+    flex-direction: column;
+    gap:0.5rem;
+    justify-items: center;
+}
+
+nav > div >div {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    font-size: min(1rem,10vw);
+}
+
+.dash {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+nav {
+    padding: 1rem;
+    display: none;
+}
+
+.square, .checkbox > input{
+    position: fixed;
+    width:2rem;
+    height: 2rem;
+    margin: 1rem;
+    cursor:pointer;
+}   
+
+.checkbox {
+    position:fixed
+}
+.square {
+    z-index:2;
+}
+
+input[type="checkbox"] {
+    opacity: 0;
+    z-index: 3;
+
+    
+}
+
+
+input[type="checkbox"]:focus + nav {
+    display: grid;
+    position: fixed;
+    top:50px;
+    left:15px;
+
+}
+
+
+.square {
+    background-color: var(--main-color);
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    padding: 3px;
+    justify-content: space-between;
+    border-radius: 5px;
+}
+
+.square > div {
+    height: 5px;
+    width: auto;
+    background-color: var(--white-color);
+    border-radius: 5px;
+}
+
+nav {
+    border-radius: 5px;
+}
+
+
+.top {
+    background-color: var(--pink-color);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    grid-area: 1/1/2/-1;
+    flex-wrap: wrap;
+}
+
+.top > div > img {
+    width: 2rem;
+    border-radius: 10rem;
+}
+
+.image {
+    display:flex;
+    align-items: center;
+    gap:0.5rem;
+}
+
+input[type="search"]{
+    height: 2rem;
+    border-radius: 2rem;
+    padding: 1rem;
+    width: 40vw;
+}
+
+nav {
+    backdrop-filter: blur(1rem);
+}
+
+.popo {
+    background: url("https://images.unsplash.com/photo-1433259651738-0e74537aa8b5?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1169&q=80");
+    background-size: cover;
+    background-repeat: no-repeat;
+    filter: blur(0.3rem);
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    z-index: -1;
+    background-position: center center;
+    top:0;
+
+}
+
+nav {
+    z-index: 12;
+}
+
+main {
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 11;
+
+}
+.main {
+    background-color: #7f1d1d98;
+    width: 70vw;
+    height: 80vh;
+    margin-top: 10vh;
+    margin-bottom: 10vh;
+    backdrop-filter: blur(1rem);
+    border-radius: 1rem;
+}
+
+.main {
+    display: grid;
+    grid-template-columns: 2fr 3fr 1fr;
+    grid-template-rows: 1fr 3fr;
+}
+
+.picture {
+    width: 4rem;
+    border-radius: 10rem;
+}
+
+.main > div {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    justify-content: center;
+}
+.buttons {
+    display: flex;
+    flex-direction: column;
+}
+
+.buttons > button {
+    width: 4rem;
+    border-radius: 2rem;
+    border-color: var(--main-color);
+    background-color: var(--pink-color);
+}
+
+.articles {
+    grid-area: 2/1/3/3;
+    grid-template-columns: repeat(auto-fit,minmax(250px,1fr));
+    grid-template-rows: repeat(auto-fit,minmax(250px,1fr));
+    gap: 15px;
+    overflow: overlay;
+    padding: 1rem;
+}
+
+.articles > div {
+    background-color: var(--pink2-color);
+    padding: 0.5rem;
+    border-radius: 0.5rem;
+    box-shadow: 3px 3px 5px;
+}
+
